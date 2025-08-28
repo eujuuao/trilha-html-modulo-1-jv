@@ -1,62 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página - Módulo I - Primeiros Passos com HTML</title>
-</head>
-<body>
-    <h1>Módulo 1 - Primeiros Passos com HTML</h1>
-    <hr />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Módulo 1 — Primeiros passos com HTML: índice, conceitos e referências.">
+    <title>Módulo 1 — Primeiros Passos com HTML</title>
+  </head>
+  <body id="topo">
+    <header>
+      <h1>Módulo 1 — Primeiros Passos com HTML</h1>
+      <p><strong>Objetivo:</strong> registrar, com links e formatação básica, o que foi aprendido no módulo.</p>
+      <nav aria-label="Índice">
+        <h2>Índice</h2>
+        <ul>
+          <li><a href="#historia">História dos computadores</a></li>
+          <li><a href="#clients">O que são <em>Clients</em>?</a></li>
+          <li><a href="#servers">O que são <em>Servers</em>?</a></li>
+          <li><a href="#estrutura-html">Estrutura básica de um HTML</a></li>
+          <li><a href="#listas">Listas ordenadas vs. não ordenadas</a></li>
+          <li><a href="#referencias">Links de referências</a></li>
+        </ul>
+      </nav>
+      <hr>
+    </header>
 
-    <h2>Índice</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste índice você deve colocar os tópicos que mais entendeu. Estes apenas são sugestões.</p>
-    <ul>
-        <li><a href="#">História dos computadores</a></li>
-        <li><a href="#">O que são <i>Clients</i>?</a></li>
-        <li><a href="#">O que são <i>Servers</i>?</a></li>
-        <li><a href="#">Como é uma estrutura básica de um HTML?</a></li>
-        <li><a href="#">Entendendo a diferença entre listas ordenadas e não ordenadas</a></li>
-        <li><a href="#">Links de referências</a></li>
-    </ul>
+    <main>
+      <section id="historia" aria-labelledby="h-historia">
+        <h2 id="h-historia">História dos computadores</h2>
+        <p>
+          A evolução dos computadores passou por gerações marcadas por <strong>inovações de hardware</strong> (válvulas, transistores, circuitos integrados)
+          e pelo avanço de <em>software</em> e redes. Um bom panorama pode ser encontrado na
+          <a href="https://pt.wikipedia.org/wiki/Hist%C3%B3ria_do_computador" target="_blank" rel="noopener noreferrer">história do computador</a>.
+        </p>
+        <p>
+          Em resumo, saímos de máquinas enormes e especializadas para dispositivos pessoais conectados, com poder de processamento acessível e
+          <u>uso massivo da internet</u>. <a href="#topo">Voltar ao índice</a>.
+        </p>
+      </section>
 
-    <h2>História dos computadores</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+      <section id="clients" aria-labelledby="h-clients">
+        <h2 id="h-clients">O que são <em>Clients</em>?</h2>
+        <p>
+          <strong>Client</strong> (ou cliente) é o lado que <em>consome</em> um serviço — por exemplo, o navegador que renderiza HTML, CSS e JavaScript.
+          Ele envia <u>requisições</u> ao servidor e apresenta as respostas ao usuário.
+          Veja também: <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/How_the_Web_works" target="_blank" rel="noopener noreferrer">como a Web funciona (MDN)</a>.
+        </p>
+        <p><a href="#topo">Voltar ao índice</a>.</p>
+      </section>
 
-    <h2>O que são <i>Clients</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+      <section id="servers" aria-labelledby="h-servers">
+        <h2 id="h-servers">O que são <em>Servers</em>?</h2>
+        <p>
+          <strong>Server</strong> (ou servidor) é a aplicação/infraestrutura que <em>fornece</em> recursos: páginas, arquivos e APIs.
+          Ele recebe requisições dos clientes, processa regras de negócio e devolve respostas (ex.: HTML ou JSON).
+        </p>
+        <p><a href="#topo">Voltar ao índice</a>.</p>
+      </section>
 
-    <h2>O que são <i>Servers</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+      <section id="estrutura-html" aria-labelledby="h-estrutura">
+        <h2 id="h-estrutura">Estrutura básica de um HTML</h2>
+        <p>
+          Um documento HTML começa com <code>&lt;!DOCTYPE html&gt;</code>, seguido de <code>&lt;html&gt;</code> (raiz),
+          <code>&lt;head&gt;</code> (metadados) e <code>&lt;body&gt;</code> (conteúdo visível).
+          Títulos usam <code>&lt;h1..h6&gt;</code>, parágrafos <code>&lt;p&gt;</code> e links <code>&lt;a&gt;</code>.
+        </p>
+        <p><a href="#topo">Voltar ao índice</a>.</p>
+      </section>
 
-    <h2>Como é uma estrutura básica de um HTML?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+      <section id="listas" aria-labelledby="h-listas">
+        <h2 id="h-listas">Listas ordenadas vs. não ordenadas</h2>
+        <p>
+          Use <strong>lista ordenada</strong> (<code>&lt;ol&gt;</code>) quando a sequência importa (passo a passo),
+          e <strong>lista não ordenada</strong> (<code>&lt;ul&gt;</code>) para coleções sem ordem específica.
+        </p>
 
-    <h2>Entendendo a diferença entre listas ordenadas e não ordenadas</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+        <h3>Exemplo de lista ordenada</h3>
+        <ol>
+          <li>Abrir o editor</li>
+          <li>Criar o arquivo <code>index.html</code></li>
+          <li>Adicionar a estrutura mínima</li>
+        </ol>
 
-    <h2>Links de referências</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Coloque links para outras páginas que falam sobre estes assuntos. Não esquece de que precisa abrir em outra aba/janela do navegador.</p>
-    <ul>
-        <li><a href="#">http://dio.me</a></li>
-        <li><a href="#">http://w3c.org</a></li>
-    </ul>
+        <h3>Exemplo de lista não ordenada</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
 
-</body>
+        <p><a href="#topo">Voltar ao índice</a>.</p>
+      </section>
+
+      <section id="referencias" aria-labelledby="h-referencias">
+        <h2 id="h-referencias">Links de referências</h2>
+        <ul>
+          <li><a href="https://www.w3.org/TR/html52/" target="_blank" rel="noopener noreferrer">Especificação HTML (W3C)</a></li>
+          <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer">HTML — MDN Web Docs</a></li>
+          <li><a href="https://dio.me" target="_blank" rel="noopener noreferrer">DIO</a></li>
+        </ul>
+        <p><a href="#topo">Voltar ao índice</a>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <hr>
+      <p>
+        <small>Projeto de estudo — HTML puro. Última atualização: <time datetime="2025-08-28">28/08/2025</time>.</small>
+      </p>
+    </footer>
+  </body>
 </html>
